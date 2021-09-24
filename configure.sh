@@ -4,7 +4,7 @@
 # launches CMake and creates configuration for
 # Release and Debug modes.
 
-
+set -x
 echo
 echo ============= Checking for CMake ============
 echo
@@ -133,6 +133,9 @@ if [ -z "$os" ]; then
         Darwin*)
             os=Darwin-clang-dynamic
             ;;
+        Linux*aarch64*)
+	    os=Linux64-gcc-Jetson
+	;;
         Linux*aarch64*Android)
             os=Android-aarch64-gcc-dynamic
             ;;
