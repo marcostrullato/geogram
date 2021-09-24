@@ -13,6 +13,12 @@ cmake_minimum_required(VERSION 2.8.11)
 # but geogram.cmake needs to be included after the project() 
 # command, since project() resets CFLAGS and CXXFLAGS.
 
+set(CMAKE_THREAD_LIBS_INIT "-lpthread")
+set(CMAKE_HAVE_THREADS_LIBRARY 1)
+set(CMAKE_USE_WIN32_THREADS_INIT 0)
+set(CMAKE_USE_PTHREADS_INIT 1)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+
 if("$ENV{GEOGRAM_WITH_VORPALINE}" STREQUAL "")
     if(IS_DIRECTORY ${CMAKE_SOURCE_DIR}/src/lib/vorpalib)
         project(Vorpaline)
