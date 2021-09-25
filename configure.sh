@@ -4,7 +4,6 @@
 # launches CMake and creates configuration for
 # Release and Debug modes.
 
-set -x
 echo
 echo ============= Checking for CMake ============
 echo
